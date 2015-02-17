@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Поиск</h1>
+
+<%= form_tag("/isearches", method: "get") do %>
+   <div class="form-group">
+  <%= label_tag(:string, "Введите тип поиска:") %>
+  <%= select_tag "id", "<option>1</option>,<option>2</option>,<option>3</option>,<option>4</option>,<option>5</option>".html_safe %>
+  </div>
+  <br>
+  <br>
+  <%= submit_tag "Поиск",  class: "btn btn-large btn-primary" %>
+<% end %>
+
+
+<h1>Хеш поиска</h1>
+<%= @input_temp %>
+<br><br>
+<h1>Найденные Юзеры</h1>
+<%= @find_users%>
+<br><br>

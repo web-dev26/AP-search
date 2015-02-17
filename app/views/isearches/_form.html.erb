@@ -1,0 +1,19 @@
+<%= form_for(@isearch) do |f| %>
+  <% if @isearch.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@isearch.errors.count, "error") %> prohibited this isearch from being saved:</h2>
+
+      <ul>
+      <% @isearch.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="actions">
+    <%= f.text %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
