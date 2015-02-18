@@ -33,7 +33,7 @@ class IsearchesController < ApplicationController
 	@users = []
 	@input_temp = @input
 	@input = chek_input(@input)
-	10000.times { @users.push(User.new)}
+	10000000.times { @users.push(User.new)}
 	
 	@find.tree_data(@users)
 	@find_users = @find.search(@input)
